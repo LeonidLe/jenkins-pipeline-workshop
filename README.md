@@ -10,7 +10,7 @@
 ```
 git clone https://github.com/gavriluk/jenkins-pipeline-workshop
 cd jenkins-pipeline-workshop
-docker-compose up -d
+CURRENT_UID=$(id -u):$(id -g) docker-compose up -d
 ```
 Просмотр запущенных контейнеров осуществляется командой
 ```docker ps```
