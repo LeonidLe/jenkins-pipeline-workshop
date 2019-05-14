@@ -3,7 +3,6 @@ version: '2'
 services:
   jenkins0:
     image: jenkins:2.60.2
-    user: ${CURRENT_UID}
     ports:
       - 8080:8080
       - 50000:50000
@@ -18,14 +17,14 @@ services:
 
   socatdockersock:
     image: bobrik/socat:latest
-    user: ${CURRENT_UID}
+    privileged: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: TCP4-LISTEN:2375,fork,reuseaddr UNIX-CONNECT:/var/run/docker.sock
 
   nexus:
     image: sonatype/nexus3:3.5.0
-    user: ${CURRENT_UID}
+    privileged: true
     volumes:
       - ./.nexus:/nexus-data
     ports:
@@ -36,7 +35,7 @@ services:
 
   bitbucket:
     image: atlassian/bitbucket-server:5.2.3
-    user: ${CURRENT_UID}
+    privileged: true
     ports:
       - 7999:7999
       - 7990:7990
@@ -45,7 +44,7 @@ services:
 
   sonar:
     image: sonarqube:6.4-alpine
-    user: ${CURRENT_UID}
+    privileged: true
     ports:
       - 9000:9000
       - 9092:9092
@@ -62,7 +61,7 @@ services:
   
   portainer:
     image: portainer/portainer
-    user: ${CURRENT_UID}
+    privileged: true
     ports:
       - "9001:9000"
     networks:
