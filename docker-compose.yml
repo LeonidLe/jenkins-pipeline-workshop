@@ -2,7 +2,7 @@ version: '2'
 
 services:
   jenkins0:
-    image: gustavoapolinario/jenkins-docker
+    image: jenkins:latest
     ports:
       - 8080:8080
       - 50000:50000
