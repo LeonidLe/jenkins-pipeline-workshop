@@ -2,5 +2,5 @@
 <jenkins.security.apitoken.ApiTokenPropertyConfiguration>
   <tokenGenerationOnCreationEnabled>false</tokenGenerationOnCreationEnabled>
   <creationOfLegacyTokenEnabled>false</creationOfLegacyTokenEnabled>
-  <usageStatisticsEnabled>true</usageStatisticsEnabled>
+  <usageStatisticsEnabled>false</usageStatisticsEnabled>
 </jenkins.security.apitoken.ApiTokenPropertyConfiguration>

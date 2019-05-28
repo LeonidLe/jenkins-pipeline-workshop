@@ -1,5 +1,5 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<org.jfrog.hudson.ArtifactoryBuilder_-DescriptorImpl plugin="artifactory@2.12.1">
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jfrog.hudson.ArtifactoryBuilder_-DescriptorImpl plugin="artifactory@3.2.2">
   <useCredentialsPlugin>true</useCredentialsPlugin>
   <artifactoryServers>
     <org.jfrog.hudson.ArtifactoryServer>
@@ -8,6 +8,7 @@
       <timeout>300</timeout>
       <bypassProxy>false</bypassProxy>
       <connectionRetry>3</connectionRetry>
+      <deploymentThreads>3</deploymentThreads>
       <deployerCredentialsConfig>
         <credentials>
           <username>admin</username>
@@ -19,9 +20,4 @@
       </deployerCredentialsConfig>
     </org.jfrog.hudson.ArtifactoryServer>
   </artifactoryServers>
-  <pushToBintrayEnabled>false</pushToBintrayEnabled>
-  <buildInfoProxyEnabled>false</buildInfoProxyEnabled>
-  <buildInfoProxyPort>0</buildInfoProxyPort>
-  <buildInfoProxyCertPublic>/var/jenkins_home/secrets/jfrog/certs/jfrog.proxy.crt</buildInfoProxyCertPublic>
-  <buildInfoProxyCertPrivate>/var/jenkins_home/secrets/jfrog/certs/jfrog.proxy.key</buildInfoProxyCertPrivate>
 </org.jfrog.hudson.ArtifactoryBuilder_-DescriptorImpl>

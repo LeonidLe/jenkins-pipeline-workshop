@@ -2,7 +2,7 @@ version: '2'
 
 services:
   jenkins0:
-    image: jenkins:lts
+    image: leonidle/jenkins:latest
     ports:
       - 8080:8080
       - 50000:50000
@@ -10,6 +10,7 @@ services:
       - socatdockersock
     privileged: true
     volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
       - ./.jenkins0:/var/jenkins_home
       - ./.jenkins-backup:/var/jenkins_backup
       - ./.jenkins-workspace:/home/jenkins

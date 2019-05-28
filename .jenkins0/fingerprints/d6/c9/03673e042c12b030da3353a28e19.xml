@@ -1,0 +1,26 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2019-05-23 08:54:29.857 UTC</timestamp>
+  <original>
+    <name>stable fabric-starter</name>
+    <number>84</number>
+  </original>
+  <md5sum>d6c903673e042c12b030da3353a28e19</md5sum>
+  <fileName>Docker image sha256:d6c903673e042c12b030da3353a28e1992f3af67fe051cd6de19b8f2b0d33840</fileName>
+  <usages/>
+  <facets>
+    <org.jenkinsci.plugins.docker.commons.fingerprint.DockerAncestorFingerprintFacet plugin="docker-commons@1.15">
+      <timestamp>1558601669836</timestamp>
+      <imageId>sha256:d6c903673e042c12b030da3353a28e1992f3af67fe051cd6de19b8f2b0d33840</imageId>
+      <usages>
+        <entry>
+          <string>stable fabric-starter</string>
+          <ranges>84</ranges>
+        </entry>
+      </usages>
+      <ancestorImageIds class="sorted-set">
+        <string>sha256:a3242bb3233f5106ac0c5c115c461442b79fe8f54cada7efd4c05834bf4d85b2</string>
+      </ancestorImageIds>
+    </org.jenkinsci.plugins.docker.commons.fingerprint.DockerAncestorFingerprintFacet>
+  </facets>
+</fingerprint>

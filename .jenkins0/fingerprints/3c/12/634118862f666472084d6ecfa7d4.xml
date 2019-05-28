@@ -1,0 +1,23 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2019-05-20 16:18:50.837 UTC</timestamp>
+  <md5sum>3c12634118862f666472084d6ecfa7d4</md5sum>
+  <fileName>Credential id=github name=leo</fileName>
+  <usages>
+    <entry>
+      <string>Build Snapshots</string>
+      <ranges>2</ranges>
+    </entry>
+    <entry>
+      <string>stable fabric-starter</string>
+      <ranges>1-12,14-42,45-69,72,83-135</ranges>
+    </entry>
+  </usages>
+  <facets>
+    <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@2.1.19">
+      <timestamp>1558969839621</timestamp>
+      <itemFullName>Build Snapshots</itemFullName>
+      <timestamp0>1558522908926</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
+  </facets>
+</fingerprint>

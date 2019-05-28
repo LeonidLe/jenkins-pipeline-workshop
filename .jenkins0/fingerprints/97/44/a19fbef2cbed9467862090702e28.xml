@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2019-05-22 10:21:08.724 UTC</timestamp>
+  <md5sum>9744a19fbef2cbed9467862090702e28</md5sum>
+  <fileName>Credential id=dockerhub name=leonidle/******</fileName>
+  <usages>
+    <entry>
+      <string>stable fabric-starter</string>
+      <ranges>56-57</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

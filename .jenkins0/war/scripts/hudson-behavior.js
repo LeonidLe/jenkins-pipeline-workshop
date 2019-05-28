@@ -529,6 +529,16 @@ function makeButton(e,onclick) {
     Element.addClassName(be,clsName);
     if(n) // copy the name
         be.setAttribute("name",n);
+
+    // keep the data-* attributes from the source
+    var length = e.attributes.length;
+    for (var i = 0; i < length; i++) {
+        var attribute = e.attributes[i];
+        var attributeName = attribute.name;
+        if (attributeName.startsWith('data-')) {
+            btn._button.setAttribute(attributeName, attribute.value);
+        }
+    }
     return btn;
 }
 
@@ -695,8 +705,17 @@ var jenkinsRules = {
 
 // validate form values to be an integer
     "INPUT.number" : function(e) { registerRegexpValidator(e,/^(\d+|)$/,"Not an integer"); },
+    "INPUT.number-required" : function(e) { registerRegexpValidator(e,/^\-?(\d+)$/,"Not an integer"); },
+
+    "INPUT.non-negative-number-required" : function(e) {
+        registerRegexpValidator(e,/^\d+$/,"Not a non-negative number");
+    },
+
     "INPUT.positive-number" : function(e) {
         registerRegexpValidator(e,/^(\d*[1-9]\d*|)$/,"Not a positive integer");
+    },
+    "INPUT.positive-number-required" : function(e) {
+        registerRegexpValidator(e,/^[1-9]\d*$/,"Not a positive integer");
     },
 
     "INPUT.auto-complete": function(e) {// form field with auto-completion support 
@@ -719,6 +738,7 @@ var jenkinsRules = {
         };
         ac.prehighlightClassName = "yui-ac-prehighlight";
         ac.animSpeed = 0;
+        ac.formatResult = ac.formatEscapedResult;
         ac.useShadow = true;
         ac.autoSnapContainer = true;
         ac.delimChar = e.getAttribute("autoCompleteDelimChar");
@@ -1505,6 +1525,10 @@ function refreshPart(id,url) {
                             window.clearInterval(intervalID);
                         return;
                     }
+                    if (!rsp.responseText) {
+                        console.log("Failed to retrieve response for ID " + id + ", perhaps Jenkins is unavailable");
+                        return;
+                    }
                     var p = hist.up();
 
                     var div = document.createElement('div');
@@ -1835,7 +1859,6 @@ function updateBuildHistory(ajaxUrl,nBuild) {
                     var wrap = blockWrap(buildDetails, buildControls);
                     indentMultiline(wrap);
                     Element.addClassName(wrap, "build-details-controls");
-                    $(displayName).setStyle({width: '100%'});
                     detailsOverflowParams = getElementOverflowParams(buildDetails); // recalculate
                     expandLeftWithRight(detailsOverflowParams, controlsOverflowParams);
                     setBuildControlWidths();
@@ -2363,6 +2386,7 @@ function createSearchBox(searchURL) {
     ac.typeAhead = false;
     ac.autoHighlight = false;
     ac.formatResult = ac.formatEscapedResult;
+    ac.maxResultsDisplayed = 25;
 
     var box   = $("search-box");
     var sizer = $("search-box-sizer");
@@ -2578,7 +2602,12 @@ function buildFormTree(form) {
                     addProperty(p, e.name.substring(r), e.value);
                 }
                 break;
-
+            case "password":
+                p = findParent(e);
+                addProperty(p, e.name, e.value);
+                // must be kept in sync with RedactSecretJsonForTraceSanitizer.REDACT_KEY
+                addProperty(p, "$redact", shortenName(e.name));
+                break;
             default:
                 p = findParent(e);
                 addProperty(p, e.name, e.value);
@@ -2861,6 +2890,20 @@ function applySafeRedirector(url) {
 }
 
 // logic behind <f:validateButton />
+function safeValidateButton(yuiButton) {
+    var button = yuiButton._button;
+    var descriptorUrl = button.getAttribute('data-validate-button-descriptor-url');
+    var method = button.getAttribute('data-validate-button-method');
+    var checkUrl = descriptorUrl + "/" + method;
+
+    // optional, by default = empty string
+    var paramList = button.getAttribute('data-validate-button-with') || '';
+    
+    validateButton(checkUrl, paramList, yuiButton);
+}
+
+// this method should not be called directly, only get called by safeValidateButton
+// kept "public" for legacy compatibility
 function validateButton(checkUrl,paramList,button) {
   button = button._button;
 

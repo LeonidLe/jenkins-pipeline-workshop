@@ -1,12 +1,118 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<scriptApproval plugin="script-security@1.29.1">
+<?xml version='1.1' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1.58">
   <approvedScriptHashes>
     <string>017d0db438428731cd600b6ebda805065433520f</string>
+    <string>0877fa3e7201f8e553086be1229a32e3320f4576</string>
+    <string>0f1f26d0467e5f96c0fa0f7fb08fcaf96e5a25cd</string>
+    <string>0f4d466635d04907299039e3f7c7185857ce0049</string>
+    <string>10ed3ea4398ad34980e3a9b8febf91dfeb5ba134</string>
+    <string>14c86f072c014659859203d2df29bb0f6c6ede2e</string>
+    <string>153cf291226179fa28281cf68a847dda9e81a9d5</string>
+    <string>161f8715b1424dd95f69cd3b2ae70fd404eaec89</string>
+    <string>17aef359e2e0cae22a58c16de0697303bbedbb11</string>
+    <string>18bb1e1bae694e197ea67db7f5b7cc644b63b4e4</string>
+    <string>19487d25fb326ea191b9a9d46a0ecc43efd9b621</string>
+    <string>1cb0d818bfe8c5b77f44f3622363c8842171bf3a</string>
+    <string>1dd90f678a7dc84c5dc597962711a118b4357428</string>
+    <string>203e7dec8801296175c151bae31f5ce8e052d1c9</string>
+    <string>2109e70a20089c21cd8bfbfa46f0448f1d6ce33e</string>
+    <string>228e36cf6c3ac43872311a89dd8a912028a71960</string>
+    <string>231240090c4522bc1c2e882891278d6cad21dc5d</string>
+    <string>237b088aad63ae5100489a97ec8cc295543d8a41</string>
+    <string>24323efc11002c93cf6750c9034deac2382c23b6</string>
+    <string>244cc018c5e1d59bcb84d1fe2ea2919ce09c1173</string>
+    <string>267c8b427594eee6b88745c90c4b655c94fd94c7</string>
+    <string>285ac0c6fd88d2f91f13b8cffa71654a35f1e45b</string>
+    <string>2a4270d43673bf3b02dfc52399f58b374275a89b</string>
+    <string>2ac80c12be2f90aee2d4418aa85e63d0c313ace1</string>
+    <string>2af3ac8a0b894e93d186ae6778b87da3553f1162</string>
+    <string>2cfc1b6c6ed1f9b9296bff5b7e05b26992098a4d</string>
+    <string>3110c6e408b5de64066eb5120bb32988184d0e48</string>
+    <string>311e95bcc79c76e229698cd024ba4e52114a89b0</string>
+    <string>3253745ebfc0c6431b8a4516a2d81de5f5ed481d</string>
+    <string>33e9cc60dd1bc810cef4adff1abe66c59c71b5c9</string>
+    <string>351b2fca94cd1ff8275d2c5d804cc6244c33acce</string>
+    <string>3a22f6a4d44dadf87e35cb5d5b6aba4a6d79b666</string>
+    <string>3b9ed7008e1b8009ff2baa5b7ade193d8369eb06</string>
+    <string>3ce6ccfa0b26aa2f761005178f55e269b6e72449</string>
+    <string>41fc3f9dd2ac054af74aae185ff096800ff1ddc3</string>
+    <string>527a2cde20f8b28c05c41b5577ba7d2ce47b5038</string>
+    <string>57bac00f3b2022e0c7ce0bd655fea460d8c14e90</string>
+    <string>581f2e86032603bcd4140c48a1fe156a45fc2c44</string>
+    <string>5c91ce06b8a661da4dec5d9cfa58dbd9df1ef98d</string>
+    <string>612e8b0efce5350d8c22bfd87c99f5d5d3241974</string>
+    <string>653a633cc002aa975932477a275cde7b59443c83</string>
+    <string>6595e97b0a0f01905fd2f2770fb630727eb9ee6f</string>
+    <string>666d3e21b3cc0a6b8c721a1bee8cb86c6365e02b</string>
+    <string>685f44babcae032f020af3ebbd96d49d9fad5750</string>
+    <string>6d77e4b8f5d7a3a33a0ba64a0c3536f95f3b8024</string>
+    <string>6da6ef2098ddc6f772a6ae9ac734ddcede1aa1b9</string>
+    <string>705ea851699f6308a8a771167d303e2701e62bf3</string>
+    <string>76b59d9b41eb01be08da54b75dc481ad9416df67</string>
+    <string>7ec345af7a96cdef5b8fe66a435a917499085a46</string>
+    <string>7ede4798559a35dd6e907dfbef422f4342b7b9f7</string>
+    <string>8a2521b784449fea2ab98268c80b4b83b7c15e74</string>
+    <string>8d04e7ace6488f49f5c4751c7646287e116d090c</string>
+    <string>932cb8f7780d39806cd3f75d63f7bc89271febff</string>
+    <string>93d756ba0b2fe5412533828816abb4cad2ea8d72</string>
+    <string>940ce0a3a8ddb34ad6b8914dffeda85108bbd0e2</string>
+    <string>94bb4729373f9e0c14f2e7594deaf7fa9adcd1bb</string>
+    <string>957e81af64a7c9937b06c970f153d1e18f809ccc</string>
+    <string>992d3d86e87d97cbac01ef1cdb9508b01fe6e926</string>
+    <string>9975530160e4e5d2e13b5890c982750f4d25b846</string>
+    <string>9ac3f3f7cefc1d6b30f5c41fe07c20b85ae7d31e</string>
+    <string>9accd88198ff352c00c231ecd02726c78452c8ab</string>
+    <string>9b6f2fbe5b073f948b8fc0642421987b229c4284</string>
+    <string>9bf1d48dd8cb5cb895d034492251fc9a4315a7a8</string>
+    <string>9c612cc744c161a698005d89695af6f30b4afa1e</string>
+    <string>9d1954f2c26b20bd9e8b56dcb40cb2ad49af8582</string>
+    <string>a2e188c4d266d180c7df79da143d3f11018f6737</string>
+    <string>a5cdca26ee9d9474a62c36df5655573d32ca1dd4</string>
+    <string>a8ffabdacf4391e973829c89bce5e7341723fab2</string>
+    <string>a9d3e938150f73cd668f54d5bc4ee6a55a87e60b</string>
+    <string>aa5415fee969127e0b7beda05c0425b9cb699829</string>
+    <string>aac299d27e9d162d0ada42df697329d5b637bd79</string>
+    <string>abb444181ba4692686a075e9a586edd8a9dc7107</string>
+    <string>ae4ac2b1c1701700317fbf807db02117945dc47d</string>
+    <string>af000ca495c4009c2dae201150d6f41ccfcbc26d</string>
+    <string>b13d027fa5f1c0faa9e3e1b4421851b59db0a3d2</string>
+    <string>b5aac88487f5e1b3b08bcfa06bfc69895a69d930</string>
+    <string>b5f61838dcbe253824663bcce263f74c2135b6c0</string>
+    <string>b6ae81ca6d3ab4632f3764b080d77514efd2b773</string>
+    <string>b7617bcce455a1ac92ddef318f5541a102478d58</string>
+    <string>bd74677223431fa9873ce073c9cb8fe5edd54fe9</string>
+    <string>bf2fccf3aabe080654f2867ef3e601afd29259e7</string>
+    <string>c0cc634fb6acfb1deab06c11f48d199706a6afad</string>
+    <string>c20e23feb8f872bea73689e8f6eb732d52591891</string>
+    <string>c3387267f94d7052ed28cd63550373f77b820bef</string>
+    <string>d0d671ef77bf86490ef2b2398e652096508974ea</string>
+    <string>d83e442dec906c793e755d83139e1540ee022207</string>
+    <string>e0f410e2c16c813817d7960b339578c5038c48a3</string>
+    <string>e26fe4d60c998cab300b68ebed40189173e9a20c</string>
+    <string>e2a18fd8f2c9fba053c93256c8a77aeb34149056</string>
+    <string>e2ab187ad1ce5cf70ee035e0cd1544612f475957</string>
+    <string>e32b3680a37cdb682675337db60fce2f88bdaa6c</string>
+    <string>e395122e5549b139181b5a2102f806566bd1e6e6</string>
+    <string>e44002b8628f5b6acc7906897df6ce26b2d55bcf</string>
+    <string>e481dbd6f8285dd657b26ab6a86a1991827fb2ca</string>
+    <string>ea292a9622d7a9405ae76c301d574765f4376fd1</string>
+    <string>eab7b32778bc3ef221c18e9d82615f09255e331f</string>
+    <string>f3e1cd0be7a106b819a75a452ce64b5cc43d0919</string>
+    <string>f42c08ac7859b6d180c5bbb2129a279aef47c9af</string>
+    <string>f8e880a1ed9063dc578ed81ccde761baefb350eb</string>
+    <string>fbaf8225cc7051becbb32389195e1cfa4d5e7273</string>
+    <string>fd29e2ac8f4da9d8439e467e132bb8b2e8edf66c</string>
   </approvedScriptHashes>
   <approvedSignatures/>
   <aclApprovedSignatures/>
   <approvedClasspathEntries/>
   <pendingScripts/>
-  <pendingSignatures/>
+  <pendingSignatures>
+    <pendingSignature>
+      <context/>
+      <signature>method groovy.lang.GroovyObject invokeMethod java.lang.String java.lang.Object</signature>
+      <dangerous>true</dangerous>
+    </pendingSignature>
+  </pendingSignatures>
   <pendingClasspathEntries/>
 </scriptApproval>
